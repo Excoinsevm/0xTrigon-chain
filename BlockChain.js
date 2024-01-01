@@ -4,13 +4,13 @@ module.exports = class BlockChain{
   constructor(){
     this.complexity = 3;
 
-    var genysisBlock = this.createGenysisBlock();
-    genysisBlock.calculateHash(this.complexity);
-    this.blocks = [genysisBlock];
+    var genesisBlock = this.createGenesisBlock();
+    genesisBlock.calculateHash(this.complexity);
+    this.blocks = [genesisBlock];
   }
 
-  createGenysisBlock(){
-    return new Block(0, '1/1/2011', 'Genysis Block', '')
+  createGenesisBlock(){
+    return new Block(0, '1/1/2011', 'Genesis Block', '')
   }
 
   addBlock(data, timestamp){
